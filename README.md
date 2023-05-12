@@ -1,3 +1,3 @@
 # DonutMakerSimple
 OPEN THE FOLDER AND RUN THE INDEX IN LIVE SERVER MODE
-Quick AI prompted speed run of a donut clicker project
+The project is about creating a game that uses button clicks to create virtual donuts. The game allows you to purchase Auto Clickers and Donut Multipliers with the donuts you earn from clicking. Auto Clickers automatically click for you every second, so you don’t have to click manually. Donut Multipliers increase the value of a click by 20% for each Donut Multiplier purchased. The cost of each Auto Clicker and Donut Multiplier increases by 10% with each purchase. The game has several features that are implemented in iterations, such as counting donuts, purchasing Auto Clickers and Donut Multipliers, and ensuring that there are enough clicks to buy an Auto Clicker. The game is designed to become more difficult as the game progresses. The JavaScript for this iteration will be solely in a DonutMaker.js file and not pertain to the html page.
