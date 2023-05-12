@@ -1,0 +1,172 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #f2bd42, #f28336);
+}
+
+header {
+  background-color: #ffcc66;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+button {
+  padding: 10px;
+  background-color: #482ce7;
+  color: #000;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #00ff99, #ff00cc, #00ff99, #ff00cc);
+  z-index: -1;
+  animation: animateNeon 5s linear infinite;
+}
+
+button:hover::before {
+  animation: none;
+}
+
+@keyframes animateNeon {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    box-shadow: 0 0 20px #00ff99, 0 0 40px #00ff99, 0 0 60px #00ff99, 0 0 80px #00ff99;
+  }
+
+  35% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    box-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 30px #00ff99, 0 0 40px #ff00cc, 0 0 70px #00ff99, 0 0 80px #ff00cc;
+  }
+
+  70% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    box-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99, 0 0 15px #00ff99, 0 0 20px #ff00cc, 0 0 35px #00ff99, 0 0 40px #ff00cc;
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    box-shadow: 0 0 20px #00ff99, 0 0 40px #00ff99, 0 0 60px #00ff99, 0 0 80px #00ff99;
+  }
+}
+
+/* BEM Styles */
+.click-section {
+  &__button {
+    padding: 10px;
+    background-color: #ffcc66;
+    color: #000;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__button::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00ff99, #ff00cc, #00ff99, #ff00cc);
+    z-index: -1;
+    animation: animateNeon 5s linear infinite;
+
+    .click-section__button:hover::before {
+      animation: none;
+    }
+
+    .click-section__subtitle {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .click-section__text {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+  }
+}
+
+/* The first selector (*) applies to everything on the page and sets the font and box-sizing properties.
+body sets margin and padding to 0.
+header sets the background color and padding for the header section.
+nav creates a navigation bar and sets its display to flex and the space between items.
+nav ul removes the bullet points from the list in the navigation bar.
+nav li displays the navigation links side by side and adds margin to them.
+nav li:last-child removes margin from the last item in the navigation bar.
+nav a sets the color, text decoration, and font size of the navigation links.
+main sets the maximum width, margin and padding for the main content area.
+section sets margin between sections.
+h2 adds space above the headings.
+button styles the button and creates a neon glow with the ::before selector.
+button::before creates the neon glow and sets the animation time.
+button:hover::before removes the animation when the button is hovered over.
+@keyframes animateNeon defines the frame animations for the neon glow.
+click-section is a BEM-style class that applies to a specific section of the page.
+&__button is a nested BEM-style selector for the button within the click-section.
+&__button::before creates a neon glow on the button within the click-section.
+.click-section__button:hover::before removes the animation when the button within the click-section is hovered over.
+.click-section__subtitle styles the subtitle text within the click-section.
+.click-section__text styles the other text in the click-section. */
